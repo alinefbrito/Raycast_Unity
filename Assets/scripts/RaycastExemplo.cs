@@ -7,7 +7,7 @@ public class RaycastExemplo : MonoBehaviour
     Ray ray;
     RaycastHit hitData;
     Vector3 point;
-    //private Camera _camera;
+    private Camera _camera;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +23,13 @@ public class RaycastExemplo : MonoBehaviour
 
         if (UnityEngine.Input.GetKey(KeyCode.Space))
         {
-            //point = new Vector3(_camera.pixelWidth / 2, _camera. pixelHeight / 2, 0);
+            //point = new Vector3(_camera.pixelWidth / 2, _camera.pixelHeight/2, 0);
             //ray = _camera.ScreenPointToRay(point);
-            ray = new Ray(transform.position, transform.forward);
+            //ray = new Ray(transform.position, transform.forward);
+             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             Debug.Log("Origem: " + ray.origin);
-            RaycastHit hitData;
+            
             Debug.Log("Direção: " + ray.direction);
 
             if (Physics.Raycast(ray, out hitData))
@@ -65,6 +66,8 @@ public class RaycastExemplo : MonoBehaviour
     {
         GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         sphere.transform.position = pos;
+        //transform.scale = new Vector3(5,5,5);
+        
         yield return new WaitForSeconds(1);
         Destroy(sphere);
     }
