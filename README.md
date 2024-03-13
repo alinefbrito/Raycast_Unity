@@ -55,6 +55,7 @@ O Raycast pode ser instanciado de diferentes formas que permitem customizar o la
     Physics.Raycast(ray, out hitData);
 </code>
  É possível também por meio da sobrecarga de métodos efetuar o lançamento por outros meios:
+![image](https://github.com/alinefbrito/Raycast_Unity/assets/15115116/315cdea4-8f7f-4433-bc89-6b77d6e0ad9f)
 
  - Informando apenas o Ray, normalmente utilizado dentro de uma condicional onde é necessário apenas saber se houve sucesso ( o retorno é **TRUE**)
  <code>
