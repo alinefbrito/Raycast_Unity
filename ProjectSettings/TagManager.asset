@@ -6,6 +6,8 @@ TagManager:
   tags:
   - target
   - destino
+  - bomb
+  - destroyer
   layers:
   - Default
   - TransparentFX
