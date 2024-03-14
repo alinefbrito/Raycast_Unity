@@ -1,0 +1,4 @@
+repository "RaycastExemplo@alinefbrito@cloud"
+  path "/"
+    br "/main"
+    co "/main"

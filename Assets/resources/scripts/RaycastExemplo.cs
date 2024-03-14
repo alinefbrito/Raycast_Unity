@@ -26,9 +26,7 @@ public class RaycastExemplo : MonoBehaviour
 
         if (UnityEngine.Input.GetKey(KeyCode.Mouse0))
         {
-            //point = new Vector3(_camera.pixelWidth / 2, _camera.pixelHeight/2, 0);
-            //ray = _camera.ScreenPointToRay(point);
-            //ray = new Ray(transform.position, transform.forward);
+           
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             color = Color.green;
             Lancar(ray, color, 1 );
@@ -112,7 +110,7 @@ public class RaycastExemplo : MonoBehaviour
     {
         GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         sphere.transform.position = pos;
-        sphere.transform.localScale = new Vector3(5, 5, 5);
+        sphere.transform.localScale = new Vector3(3, 3, 3);
         string src = string.Concat("material/", material);
         Material bombMaterial = Resources.Load(src, typeof(Material)) as Material;
 
